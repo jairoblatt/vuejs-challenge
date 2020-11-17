@@ -1,0 +1,79 @@
+@import '../../assets/styles/style.scss';
+
+.post-container{
+    margin-top: 10px;
+    width: 100%;
+    &:hover{
+        @include hover;
+    }
+    .post-content{
+        h2{
+            @include text(1rem, 500);
+            small{
+                @include text(0.87rem);
+                margin-left: 10px;
+            }
+        }
+        h3{
+            @include text(0.93rem, 500);
+        }
+        @include lt-md{
+            .post-content{
+                width: 100%;
+            }
+        }
+    }
+
+    .post-img{
+        border-radius: 18px;
+        overflow:hidden;
+        img{
+            max-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    .post-actions{
+        display: flex;
+        span{
+           button{
+            &:first-child{
+                color: $red-darken-2;
+            }
+           }
+        }
+    }
+
+    .post-comments-container{
+        height: 30vh;
+        overflow-y: scroll;
+    }
+
+    .post-comments{
+        padding: 20px 10px;
+        border-radius: 18px;
+        &:hover{
+            @include hover;
+            background: $gray-ligth-2;
+        }
+       .user-info{
+           display: flex;
+           align-items: center;
+           span{
+            margin-left:10px;
+           }
+           h2{
+            @include text(1rem,500);
+            margin: 0;
+           }
+           h3{
+               @include text(0.9rem);
+               margin: 0;
+           }
+       }
+       .comment{
+           margin-top: 10px;
+       }
+    }
+
+}

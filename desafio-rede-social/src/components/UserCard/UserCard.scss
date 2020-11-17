@@ -1,0 +1,67 @@
+@import '../../assets/styles/style.scss';
+.user-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 300px;
+    @include lt-md{
+        width: 400px;
+    }
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        h2 {
+            @include text(0.87rem, 400);
+            color:$gray-darken-4;
+        }
+        h3 {
+            margin: 0;
+            @include text(1.5rem, 600);
+            span {
+                @include text(1rem, 600);
+                color: $gray-darken-3;
+            }
+        }
+        @include lt-md{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .user-revenues {
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 10px;
+
+        i {
+            color: $primary;
+        }
+
+        .revenue-item {
+            margin-left: 10px;
+
+            h2 {
+                @include text(1.2rem, 600);
+                margin: 0;
+            }
+
+            h3 {
+                @include text(0.95rem);
+                color: $gray-ligth-1;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .divider {
+            width: 3px;
+            background: $gray-ligth-3;
+            border: none;
+            margin-top: 20px;
+        }
+    }
+}

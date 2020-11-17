@@ -1,0 +1,59 @@
+@import './style.scss';
+
+.login-container {
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    .row {
+        flex: 0 0 25%;
+        justify-content: center;
+    }
+}
+
+.login-header-container {
+    ul {
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+    }
+    @include lt-sm{
+        margin-top: 10px;
+        @include text(0.87rem);
+    }
+}
+
+.login-form-input {
+    margin-top: 30px;
+}
+
+// HEAD FORM TITLE 
+.login-title {
+    padding-bottom: 20px;
+    color: $gray-darken-3;
+    span {
+        color: $primary;
+    }
+}
+
+// FORM ACTIONS
+.login-form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    @include lt-sm{
+        flex-direction: column-reverse;
+    }
+}
+
+// LOGIN FOOTER
+.login-footer {
+    text-align: center;
+    padding: 90px 15px;
+    @include text(0.8rem);
+    color: $gray-ligth-1;
+    @include lt-sm{
+        padding:40px 5px;
+    }
+}

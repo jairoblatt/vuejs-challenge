@@ -1,0 +1,53 @@
+@import '../../assets/styles/style.scss';
+.card-contact-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    .contact-card-body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding:0 30px;
+      @include lt-md{
+        padding: 0 5px;
+        h2{
+            @include text(0.8rem);
+        }
+      }
+        h2{
+            padding-top: 13px;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    h2{
+        @include text(0.9rem, 500)
+    }
+}
+
+.contact-card-action{
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+  button{
+     float: right;
+      border: none;
+      background:transparent;
+      outline: none;
+      border-radius: 50%;
+      padding:4px 5px;
+      &:hover{
+          cursor: pointer;
+          background: rgba(175, 175, 175, 0.158);
+          transition-duration: 0.3s;
+      }
+  }
+}

@@ -1,0 +1,104 @@
+@import './style.scss';
+@import './bootstrap/bootstrap-grid.scss';
+
+html,
+body,
+#app {
+    font-family: $font-family-default;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #F5F6FA !important;
+    overflow-x: none;
+}
+
+// LAYOUT DEFAULT GRID
+.layout-container {
+    display: grid;
+    grid-template-columns: 6% 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    padding-left: 0 !important;
+    grid-template-areas:
+        'NavigationDrawer ContentPage'
+        'NavigationDrawer ContentPage';
+
+    .layout-navigation-drawer {
+        grid-area: NavigationDrawer;
+    }
+
+    .layout-content-page {
+        grid-area: ContentPage;
+    }
+
+    @include lt-md {
+        grid-template-columns:1fr;
+        grid-template-areas:
+        'NavigationDrawer NavigationDrawer'
+        'ContentPage ContentPage';
+    }
+}
+
+// LAYOUT PAYMENT GRID
+.layout-content-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+   
+    grid-template-areas:
+        'aside section'
+        'aside section';
+
+    .layout-aside {
+        grid-area: aside;
+    }
+
+    .layout-section {
+        grid-area: section;
+    }
+
+    @include lt-md {
+        margin-top: 80px;
+        grid-template-areas:
+            'aside aside'
+            'section section';
+    }
+}
+
+
+.layout-default-container {
+    margin-left: 70px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+// section type
+.section-title {
+    h2 {
+        @include text(1.1rem, 500);
+        color: $gray-darken-3;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 4.5px;
+    height: 4.5px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: $gray-darken-3;
+}
+
+.friends-section{
+    height: 40vh;
+    overflow-y: scroll;
+}

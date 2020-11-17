@@ -1,0 +1,33 @@
+@import '../../assets/styles/style.scss';
+.new-friend-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    .new-friend-icon {
+        text-align: center;
+        button {
+            @include text(20px);
+            border-radius: 15px;
+            border: 1px solid $gray-darken-3;
+         
+            background: transparent;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    h2 {
+        @include text(0.9rem, 500)
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
