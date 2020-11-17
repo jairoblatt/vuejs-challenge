@@ -1,4 +1,4 @@
-# Desafio rede social - by:Jairo Blatt
+# Desafio rede social
 
 
 # Features
